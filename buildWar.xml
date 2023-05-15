@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xuzb" default="war">
+	<description>xuzb</description>
+	<!-- 定义目录变量 -->
+	<property name="version" value="1.0" />
+	<property name="project" value="xuzb" />
+	<property name="tomcat_lib" value="D:\Environment\apache-tomcat-7.0.109\apache-tomcat-7.0.109\lib" />
+
+	<property name="src.dir" value="src" />
+	<property name="compile.dir" value="${project}/WEB-INF/classes" />
+	<property name="lib.dir" value="${project}/WEB-INF/lib" />
+
+	<!-- 定义编译文件时所引用的库 -->
+	<path id="compile.classpath">
+		<!-- fileset 表示一个文件集 -->
+		<fileset dir="${lib.dir}" id="project_lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${tomcat_lib}" id="project_lib2">
+			<include name="servlet-api.jar" />
+			<include name="jsp-api.jar" />
+		</fileset>
+	</path>
+
+	<!-- 首任务（空）-->
+	<target name="init" />
+	<!-- 编译 -->
+	<target name="compile" depends="init">
+		<!--编译源程序-->
+		<javac srcdir="${src.dir}" destdir="${compile.dir}" debug="false" encoding="UTF-8">
+			<classpath refid="compile.classpath" />
+		</javac>
+		<copy todir="${compile.dir}">
+			<fileset dir="${src.dir}">
+				<exclude name="com/**" />
+			</fileset>
+		</copy>
+	</target>
+	<!-- Create a web archive that can be deployed to an app server -->
+	<target name="war" depends="compile">
+		<war destfile="${project}.war" webxml="${project}/WEB-INF/web.xml" basedir="${project}">
+			<manifest>
+				<attribute name="Manifest-Version" value="${version}" />
+				<attribute name="Manifest-author" value="yjc" />
+			</manifest>
+		</war>
+	</target>
+</project>

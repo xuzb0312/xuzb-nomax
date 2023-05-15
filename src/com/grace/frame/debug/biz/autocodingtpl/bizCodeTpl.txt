@@ -1,0 +1,220 @@
+	/**
+	 * 进入【@{ywms}】管理页面
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap fwd@{ywzj}Mng(final DataMap para) throws Exception {
+		//**TODO：需要在进入管理页面前处理的操作**
+		return null;
+	}
+	
+	/**
+	 * 查询【@{ywms}】信息
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap query@{ywzj}Info(final DataMap para) throws Exception {
+	StringBuffer sqlBF = new StringBuffer();
+@$loop{@dsquery}		String ${name} = para.getTrimString("${name}");
+@$loop
+		// 判断为空
+@$loop{@dsquery}		if (StringUtil.chkStrNull(${name})) {
+			throw new BizException("【${label}】不允许为空");
+		}
+@$loop
+
+		//查询操作
+		sqlBF.setLength(0);
+		
+		// **TODO：补充查询sql**
+
+		this.sql.setSql(sqlBF.toString());
+@$loop{@dsquery}		this.sql.setString(${index}, ${name});
+@$loop		DataSet ds@{ywzj} = this.sql.executeQuery();
+
+		//排序操作
+
+		//数据返回
+		DataMap rdm = new DataMap();
+		rdm.put("ds@{ywzj_xx}", ds@{ywzj});
+		return rdm;
+	}
+
+	/**
+	 * 【@{ywms}】信息新增
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap fwd@{ywzj}Add(final DataMap para) throws Exception {
+		//**TODO：需要在进入新增页面前处理的操作**
+		return null;
+	}
+	
+	/**
+	 * 保存【@{ywms}】信息新增
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap save@{ywzj}Add(final DataMap para) throws Exception {
+		StringBuffer sqlBF = new StringBuffer();
+@$loop{@dsadd}		String ${name} = para.getTrimString("${name}");
+@$loop
+		// 判断为空
+@$loop{@dsadd}		if (StringUtil.chkStrNull(${name})) {
+			throw new BizException("【${label}】不允许为空");
+		}
+@$loop
+		
+		// **TODO：检查业务是否重复**
+		this.sql.setSql(" select @@ from @{ywbmc} where @@ ");
+		this.sql.setString(1, @@);
+		this.sql.setString(2, @@);
+		this.sql.setString(3, @@);
+		DataSet dsTemp = this.sql.executeQuery();
+		if (dsTemp.size() > 0) {
+			String @@ = dsTemp.getString(0, "@@");
+			throw new BizException("@{ywms}信息中，该条信息已经存在，无法新增");
+		}
+
+		// 获取Id
+		String @@ = SeqUtil.getId("@@");
+
+		// 保存操作
+		sqlBF.setLength(0);
+		
+		// **TODO：补充插入sql**
+		
+		this.sql.setSql(sqlBF.toString());
+@$loop{@dsadd}		this.sql.setString(${index}, ${name});
+@$loop		this.sql.executeUpdate();
+
+		// 记录日志
+		this.log("@@", "@{ywms}信息新增", "@@", @@, "新增@{ywms}：" + @@, "@@="
+				+ @@ + ",@@=" + @@);
+
+		DataMap rdm = new DataMap();
+		return rdm;
+	}
+
+
+	/**
+	 * 【@{ywms}】信息修改
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap fwd@{ywzj}Modify(final DataMap para) throws Exception {
+		StringBuffer sqlBF = new StringBuffer();
+@$loop{@dspk}		String ${name} = para.getTrimString("${name}");
+@$loop
+		// 判断为空
+@$loop{@dspk}		if (StringUtil.chkStrNull(${name})) {
+			throw new BizException("【${label}】不允许为空");
+		}
+@$loop
+
+		
+		//查询
+		sqlBF.setLength(0);
+		
+		// **TODO：补充查询sql**
+		
+		this.sql.setSql(sqlBF.toString());
+@$loop{@dspk}		this.sql.setString(${index}, ${name});
+@$loop		DataSet ds@{ywzj} = this.sql.executeQuery();
+		
+		if (ds@{ywzj}.size() <= 0) {
+			throw new BizException("@{ywms}[@$loop{@dspk}${label}:"+${name}+"@$loop]数据不存在！");
+		}
+
+		DataMap rdm = new DataMap();
+		rdm.put("dm@{ywzj_xx}", ds@{ywzj}.getRow(0));
+		return rdm;
+	}
+
+	/**
+	 * 保存【@{ywms}】信息修改
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap save@{ywzj}Modify(final DataMap para) throws Exception {
+		StringBuffer sqlBF = new StringBuffer();
+@$loop{@dsall}		String ${name} = para.getTrimString("${name}");
+@$loop
+		// 判断为空
+@$loop{@dsall}		if (StringUtil.chkStrNull(${name})) {
+			throw new BizException("【${label}】不允许为空");
+		}
+@$loop
+		
+		// **TODO：检查业务是否重复**
+		this.sql.setSql(" select @@ from @{ywbmc} where @@ ");
+		this.sql.setString(1, @@);
+		this.sql.setString(2, @@);
+		this.sql.setString(3, @@);
+		DataSet dsTemp = this.sql.executeQuery();
+		if (dsTemp.size() > 0) {
+			String @@ = dsTemp.getString(0, "@@");
+			throw new BizException("@{ywms}信息中，该条信息已经存在，无法新增");
+		}
+
+		// 保存操作
+		sqlBF.setLength(0);
+		
+		// **TODO：补充更新sql--调整顺序**
+		
+		this.sql.setSql(sqlBF.toString());
+@$loop{@dsall}		this.sql.setString(${index}, ${name});
+@$loop		this.sql.executeUpdate();
+
+		// 记录日志
+		this.log("@@", "@{ywms}信息修改", "@@", @@, "修改@{ywms}：" + @@, "@@="
+				+ @@ + ",@@=" + @@);
+
+		DataMap rdm = new DataMap();
+		return rdm;
+	}
+
+	/**
+	 * 【@{ywms}】信息删除
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public final DataMap save@{ywzj}Delete(final DataMap para) throws Exception {
+		StringBuffer sqlBF = new StringBuffer();
+@$loop{@dspk}		String ${name} = para.getTrimString("${name}");
+@$loop
+		// 判断为空
+@$loop{@dspk}		if (StringUtil.chkStrNull(${name})) {
+			throw new BizException("【${label}】不允许为空");
+		}
+@$loop
+
+		//删除操作
+		sqlBF.setLength(0);
+		
+		// **TODO：补充删除sql--切记where条件**
+		
+		this.sql.setSql(sqlBF.toString());
+@$loop{@dspk}		this.sql.setString(${index}, ${name});
+@$loop		this.sql.executeUpdate();
+		
+		// 记录日志
+		this.log("@@", "@{ywms}信息删除", "@@", @@, "删除@{ywms}：" + @@, "@@="
+				+ @@ + ",@@=" + @@);
+
+		return null;
+	}

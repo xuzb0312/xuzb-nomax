@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- 文本与图标的对应关系 -->
+<root>
+	<config key="保存" value="icon-save"></config>
+	<config key="帮助" value="icon-help"></config>
+	<config key="关闭" value="icon-cross"></config>
+	<config key="取消" value="icon-cancel"></config>
+	<config key="设置" value="icon-cog"></config>
+	<config key="打印" value="icon-printer"></config>
+	<config key="查询" value="icon-find"></config>
+	<config key="清空" value="icon-arrow-refresh-small"></config>
+	<config key="新增" value="icon-add"></config>
+	<config key="确定" value="icon-accept"></config>
+	<config key="确认" value="icon-accept"></config>
+	<config key="选择" value="icon-accept"></config>
+	<config key="修改" value="icon-report-edit"></config>
+	<config key="删除" value="icon-delete"></config>
+	<config key="移除" value="icon-remove"></config>
+</root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+		</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="connection.username">system</property>
+		<property name="connection.password">SYSTEM</property>
+		<!--
+			事物隔离级别： 1：读操作未提交（Read Uncommitted） 2：读操作已提交（Read Committed）
+			4：可重读（Repeatable Read） 8：可串行化（Serializable）
+		-->
+		<property name="hibernate.connection.isolation">2</property>
+		<!--如果启动用户名密码加密，则开启该驱动EFC3P0ConnectionProvider-->
+		<!--
+			<property name="connection.provider_class">
+			com.grace.frame.hibernate.EFC3P0ConnectionProvider</property>
+		-->
+		<property name="dialect">
+			org.hibernate.dialect.Oracle10gDialect
+		</property>
+		<property name="hibernate.show_sql">true</property><!-- 是否在控制台展示sql -->
+		<property name="jdbc.batch_size">50</property><!-- 数据库写的条数大小 -->
+		<property name="hibernate.c3p0.min_size">5</property><!-- 最小连接数 -->
+		<property name="hibernate.c3p0.max_size">35</property><!-- 最大连接数 -->
+		<property name="hibernate.c3p0.timeout">120</property><!-- 最大空闲时间，超过空闲时间的连接将被丢弃。 -->
+		<property name="hibernate.c3p0.max_statements">0</property>
+		<!--
+			最大的PreparedStatement的缓存数量,因为框架中每个sql都申请新的connect，所以不需要缓存
+		-->
+		<property name="hibernate.c3p0.idle_test_period">60</property>
+		<!--
+			每隔60秒检查连接池里的空闲连接 ，单位是秒，如果有这个参数，就会自动断网重连
+		-->
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<!--
+			当连接池里面的连接用完的时候，C3P0获取的新的连接数但是不会超过max_size，因此最大和最小相同，所以此时设置为0
+		-->
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+
+.l-btn-plain {
+	color: #fff;
+}
+
+.l-btn .l-btn-text {
+	font-size: 13px;
+}
+
+.icon-quit {
+	background: url('../img/quit.png') no-repeat 2px 0px;
+}
+
+.l-btn-selected,.l-btn-selected:hover {
+	background: #F0F0F0;
+	filter: none;
+	color: #000;
+	border: 1px solid #eee;
+	box-shadow: 1px 1px 1px #aaa;
+}
+
+.l-btn-icon-top .l-btn-text {
+	margin: 23px 4px 0 4px;
+}
+
+.tabs-title {
+	font-size: 13px;
+}
+
+.pf-nav {
+	float: left;
+	height: 64px;
+	width: auto;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.pf-nav-item {
+	margin-top: 7px;
+	float: left;
+	height: 56px;
+	padding: 0px;
+	list-style: none;
+	border-right: 1px solid #1380cb;
+	border-top: 1px solid #1380cb;
+	border-left: 1px solid #1380cb;
+	float: left;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	margin-right: 1px;
+}
+
+.pf-nav-item a {
+	display: block;
+	float: left;
+	height: 43px;
+	padding: 7px 13px 6px 13px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.pf-nav-item a.current {
+	background: #4aa9eb;
+}
+
+.pf-nav-item a:hover {
+	background: #2a8dd1;
+}
+
+.pf-nav-item a.current:hover {
+	background: #45abf2;
+}
+
+.pf-nav-item a .icon {
+	display: block;
+	float: left;
+	width: 43px;
+	height: 43px;
+}
+
+.pf-nav-item a .text {
+	float: left;
+	width: auto;
+	margin-top: 12px;
+	margin-left: 8px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/*导航图标*/
+.icon-bug {
+	background: url("../img/icon-bug.png") no-repeat center center;
+}
+
+.icon-application-osx {
+	background: url("../img/icon-application-osx.png") no-repeat center
+		center;
+}

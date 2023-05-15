@@ -1,0 +1,94 @@
+####################*管理JSP：page@{ywzj}Mng.jsp*####################
+
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="easyFrame.tld" prefix="ef"%>
+<ef:body>
+	<ef:form name="formQuery" title="查询条件">
+@{listquery}
+		<ef:buttons closebutton="false" colspan="2">
+			<ef:button value="查询" onclick="btnQueryClick();"></ef:button>
+			<ef:button value="清空" onclick="btnClearClick();"></ef:button>
+		</ef:buttons>
+	</ef:form>
+	<ef:queryGrid name="grid@{ywzj}" title="@{ywms}信息">
+@{listresult}
+	</ef:queryGrid>
+	<ef:buttons>
+		<ef:button value="新增" onclick="btnAddClick();"></ef:button>
+		<ef:button value="修改" onclick="btnModClick();"></ef:button>
+		<ef:button value="删除" onclick="btnDelClick();"></ef:button>
+	</ef:buttons>
+</ef:body>
+<script type="text/javascript">
+	function onLoadComplete() {
+		btnQueryClick();
+	}
+
+	function btnQueryClick() {
+		var url = new URL("**TODO：.do**", "query@{ywzj}Info");
+		url.addForm("formQuery");
+		AjaxUtil.asyncRefreshData(url, "grid@{ywzj}:ds@{ywzj_xx}");
+	}
+
+	function btnClearClick() {
+		getObject("formQuery").clear();
+		getObject("grid@{ywzj}").clear();
+		getObject("formQuery").focus();
+	}
+
+	//新增
+	function btnAddClick() {
+		var url = new URL("**TODO：.do**", "fwd@{ywzj}Add");
+		openWindow("新增【@{ywms}】", url, "normal", function(data) {
+			if (chkObjNull(data)) {
+				return;
+			}
+			btnClearClick();
+			
+			// **TODO：回填操作***
+			// var mapData = new HashMap(data);
+			// getObject("").setValue(mapData.get(""));
+			
+			btnQueryClick();
+		});
+	}
+
+	//删除
+	function btnDelClick() {
+		var grid = getObject("grid@{ywzj}");
+		if (!grid.isSelectRow()) {
+			alert("请先选择一条【@{ywms}】信息");
+			return;
+		}
+		if (!confirm("确认要删除【@{ywms}】信息吗？")) {
+			return;
+		}
+
+		var rowid = grid.getSelectedRow();
+		var url = new URL("**TODO：.do**", "save@{ywzj}Delete");
+@$loop{@dsywid}		url.addPara("${ywid}", grid.getCell(rowid, "${ywid}"));
+@$loop		AjaxUtil.syncBizRequest(url, function(data) {
+			alert("删除成功");
+			btnQueryClick();
+		});
+	}
+
+	//修改
+	function btnModClick() {
+		var grid = getObject("grid@{ywzj}");
+		if (!grid.isSelectRow()) {
+			alert("请先选择一条【@{ywms}】信息");
+			return;
+		}
+
+		var rowid = grid.getSelectedRow();
+		var url = new URL("**TODO：.do**", "fwd@{ywzj}Modify");
+@$loop{@dsywid}		url.addPara("${ywid}", grid.getCell(rowid, "${ywid}"));
+@$loop		openWindow("修改【@{ywms}】信息", url, "normal", function(data) {
+			if (chkObjNull(data)) {
+				return;
+			}
+			btnQueryClick();
+		});
+	}
+</script>

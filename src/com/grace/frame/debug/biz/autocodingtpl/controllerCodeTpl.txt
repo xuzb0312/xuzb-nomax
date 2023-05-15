@@ -1,0 +1,91 @@
+	/**
+	 * 进入【@{ywms}】管理页面
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView fwd@{ywzj}Mng(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		DataMap rdm = this.doBizMethod("******TODO：Biz路径******", "fwd@{ywzj}Mng", para);
+		return new ModelAndView("******TODO：Jsp路径******/page@{ywzj}Mng.jsp", rdm);
+	}
+	
+	/**
+	 * 查询【@{ywms}】信息
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView query@{ywzj}Info(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		DataMap rdm = this.doBizMethod("******TODO：Biz路径******", "query@{ywzj}Info", para);
+		return this.refreshData(response, rdm);
+	}
+	
+	/**
+	 * 【@{ywms}】信息新增
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView fwd@{ywzj}Add(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		DataMap rdm = this.doBizMethod("******TODO：Biz路径******", "fwd@{ywzj}Add", para);
+		return new ModelAndView("******TODO：Jsp路径******/win@{ywzj}Add.jsp", rdm);
+	}
+	
+	/**
+	 * 保存【@{ywms}】信息新增
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView save@{ywzj}Add(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		DataMap rdm = this.doBizMethod("******TODO：Biz路径******", "save@{ywzj}Add", para);
+		ActionUtil.writeDataMapToResponse(response, rdm);
+		return null;
+	}
+	
+	/**
+	 * 【@{ywms}】信息修改
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView fwd@{ywzj}Modify(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		DataMap rdm = this.doBizMethod("******TODO：Biz路径******", "fwd@{ywzj}Modify", para);
+		return new ModelAndView("******TODO：Jsp路径******/win@{ywzj}Modify.jsp", rdm);
+	}
+	
+	/**
+	 * 保存【@{ywms}】信息修改
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView save@{ywzj}Modify(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		this.doBizMethod("******TODO：Biz路径******", "save@{ywzj}Modify", para);
+		return null;
+	}
+	
+	/**
+	 * 【@{ywms}】信息删除
+	 * 
+	 * @author autoCoding-自动代码工具
+	 * @date 创建时间 @{dqrq}
+	 * @since V1.0
+	 */
+	public ModelAndView save@{ywzj}Delete(HttpServletRequest request,
+			HttpServletResponse response, DataMap para) throws Exception {
+		this.doBizMethod("******TODO：Biz路径******", "save@{ywzj}Delete", para);
+		return null;
+	}

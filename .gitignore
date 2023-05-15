@@ -1,0 +1,5 @@
+*.class
+*.war
+hs_err_pid*
+out/
+xuzb/WEB-INF/classes

@@ -1,0 +1,203 @@
+@CHARSET "UTF-8";
+
+/*系统基本通用的css样式*/
+html,body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body,button,input,select,textarea,table {
+	font-family: 'Microsoft Yahei', STHeiti, sans-serif;
+	color: #393D49;
+	font-size: 12px;
+}
+
+input,textarea,select {
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+legend {
+	margin-left: 3px;
+	font-weight: bold;
+}
+
+/*form相关的内容*/
+.formfieldset {
+	width: auto;
+	border: 1px solid #95B8E7;
+	padding: 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+
+.formOddTr {
+	height: 29px;
+	padding: 1px 0px;
+	background: #FFFFFF;
+}
+
+.formEvenTr {
+	height: 29px;
+	padding: 1px 0px;
+	background: #fafdfe;
+}
+
+/*下拉框样式*/
+.dropdownlist {
+	border: 1px solid #95B8E7;
+	box-sizing: content-box;
+	padding: 1px 3px 1px 3px;
+}
+
+.dropdownlist-invlalid {
+	border: 1px solid #ff8400;
+	box-sizing: content-box;
+	padding: 1px 3px 1px 3px;
+}
+
+/*多选下来框*/
+.mulitdropdownlist {
+	border: 1px solid #95B8E7;
+}
+
+.mulitdropdownlist-invlalid {
+	border: 1px solid #ff8400;
+}
+
+/*多选框*/
+.mulitselectbox {
+	border: 1px solid #95B8E7;
+}
+
+.mulitselectbox-invlalid {
+	border: 1px solid #ff8400;
+}
+
+/*文本域*/
+.textareatag {
+	border: 1px solid #95B8E7;
+}
+
+.textareatag-invlalid {
+	border: 1px solid #ff8400;
+}
+
+/*浮动框的样式*/
+.mulitddl-a {
+	color: #0C80D7;
+	text-decoration: none;
+	display: block;
+	margin-left: 5px;
+	float: left;
+}
+
+.mulitddl-a:hover {
+	color: #044894;
+	font-weight: bold;
+}
+
+/*复选框*/
+.checkboxlist-invlalid {
+	border-bottom: 1px dotted #ff8400;
+}
+
+/*系统加载数据时的mask遮罩层*/
+.sys-loading-mask {
+	background: #ccc;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity = 40);
+	opacity: 0.40;
+	display: block;
+	overflow: hidden;
+	z-index: 999999999999;
+	background-image: url('../imgs/loading.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*grid的搜索框样式*/
+.gridTxtSearchBtn {
+	background: url('../imgs/magnifier.png') no-repeat center right;
+}
+
+/*tipMsg的提示框*/
+.sys_tip_msg_div {
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -200px;
+	text-align: center;
+	width: 400px;
+	background: #f9edbe;
+	border: 1px solid #f0c36d;
+	padding: 6px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+	color: #d06200;
+}
+
+/*展示边框的form样式*/
+table.formtable_line {
+	border: 1px solid #e6e6e6;
+}
+
+table.formtable_line>tbody>tr>td {
+	border: 1px solid #e6e6e6;
+	padding: 4px 13px 4px 4px;
+	background: #ffffff;
+}
+
+table.formtable_line>tbody>tr.formOddTr>td.right {
+	background: #fafdfe;
+	padding-right: 5px;
+}
+
+table.formtable_line>tbody>tr.formEvenTr>td.right {
+	background: #F2F6F9;
+	padding-right: 5px;
+}
+
+/*提示标签样式*/
+.tiptag {
+	margin-right: 2px;
+	margin-left: 2px;
+	background: #FF5722;
+	color: #fff;
+	text-align: center;
+	padding: 2px 8px 3px 8px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0px 0px 1px 0px #FFF;
+	line-height: 1.9;
+}
+
+/*queryGrid Tag样式*/
+.grid-tag {
+	margin-right: 2px;
+	margin-left: 2px;
+	background: #FFF;
+	color: #FF5722;
+	box-shadow: 0px 0px 2px 0px #FF5722;
+	text-align: center;
+	padding: 2px 8px 3px 8px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px; border-radius : 2px;
+	line-height: 1.9;
+	border-radius: 2px;
+}

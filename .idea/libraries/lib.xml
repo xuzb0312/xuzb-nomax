@@ -1,0 +1,62 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-excelant-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jsoup-1.10.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/guava-20.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-scratchpad-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-examples-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/QRCode.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/gson-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/spring.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jmimemagic-0.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/pinyin4j-2.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-ooxml-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jmagick.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/db2jcc_license_cu.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-lang.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/iText-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jedis-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/ojdbc5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/iTextAsian.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/httpcore-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/javadbf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/httpclient-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/mail-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/opencv-310.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jug-lgpl-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/jbarcode-0.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-fileupload-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/wmf2svg-0.9.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/xmlworker-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-pool2-2.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/java_websocket.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/poi-ooxml-schemas-3.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/httpmime-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/Qrcodeen.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/itext-rtf-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/commons-beanutils-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/spring-webmvc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/db2jcc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xuzb/WEB-INF/lib/hibernate3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

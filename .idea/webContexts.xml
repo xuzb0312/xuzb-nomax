@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/xuzb/frame/jsp/bizprocess/pageHomeProceeding.jsp" value="file://$PROJECT_DIR$/xuzb/frame/jsp/bizprocess" />
+        <entry key="file://$PROJECT_DIR$/xuzb/frame/jsp/debug/winFileModelAdd.jsp" value="file://$PROJECT_DIR$/xuzb/frame/jsp/debug" />
+        <entry key="file://$PROJECT_DIR$/xuzb/frame/jsp/urm/pageStdUserMng.jsp" value="file://$PROJECT_DIR$/xuzb/frame/jsp/urm" />
+        <entry key="file://$PROJECT_DIR$/xuzb/frame/jsp/urm/winStdUserAdd.jsp" value="file://$PROJECT_DIR$/xuzb/frame/jsp/urm" />
+        <entry key="file://$PROJECT_DIR$/xuzb/frame/jsp/urm/winStdUserGrxxglMng.jsp" value="file://$PROJECT_DIR$/xuzb/frame/jsp/urm" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- set the max upload size100MB -->
+		<property name="maxUploadSize">
+			<value>104857600</value>
+		</property>
+		<!-- set the max inMemory size50MB -->
+		<property name="maxInMemorySize">
+			<value>52428800</value>
+		</property>
+		<property name="defaultEncoding" value="GBK" />
+	</bean>
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<!-- 框架级的请求，勿动 -->
+				<prop key="/service.do">service</prop><!-- 服务 -->
+				<prop key="/login.do">login</prop><!-- 系统登录 -->
+				<prop key="/taglib.do">taglib</prop><!-- 标签的后台请求操作 -->
+				<prop key="/debug.do">debug</prop><!--调试模式配置的后台请求操作 -->
+				<prop key="/urm.do">urm</prop><!--用户权限管理 -->
+				<prop key="/bizprocess.do">bizprocess</prop><!--业务流程的管理 -->
+				<!-- 新标签库的内容 -->
+				<prop key="/shinetag.do">shinetag</prop>
+
+				<!-- 业务系统请求 -->
+			</props>
+		</property>
+	</bean>
+	<!-- 框架级的请求，勿动 -->
+	<bean id="service" class="com.grace.frame.service.ServiceController"></bean>
+	<bean id="login" class="com.grace.frame.login.LoginController"></bean>
+	<bean id="taglib" class="com.grace.frame.taglib.TaglibController"></bean>
+	<bean id="debug" class="com.grace.frame.debug.DebugController"></bean>
+	<bean id="urm" class="com.grace.frame.urm.UrmController"></bean>
+	<bean id="bizprocess" class="com.grace.frame.bizprocess.BizProcessController"></bean>
+	<!-- 新标签库的内容 -->
+	<bean id="shinetag"
+		class="com.grace.frame.shine.taglib.controller.ShineTagController"></bean>
+
+	<!-- 业务系统请求 -->
+</beans>

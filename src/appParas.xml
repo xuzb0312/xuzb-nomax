@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config key="dbid" value="000"></config><!-- 数据库dbid -->
+	<config key="appid" value="eframe"></config><!--系统的唯一标识ID -->
+	<config key="appname" value="业务系统框架"></config><!--系统的名称 -->
+	<config key="appicon" value="frame/imgs/logo_icon.ico"></config><!--系统的Logo-ICON -->
+	<config key="debug_mode" value="true"></config><!-- 运行模式，是否为调试模式 -->
+	<config key="is_start_polling" value="false"></config><!-- 是否启动轮询服务 -->
+	<config key="is_start_service" value="false"></config><!-- 是否启动对外服务 -->
+	<!-- 单独登录验证Class,为空则走标准登录验证,对于Class必须继承于超类LoginCheckSupport -->
+	<config key="sep_login_verification_class" value=""></config>
+	<config key="app_version" value="0.0"></config><!-- 业务系统程序版本号 -->
+	<config key="configinwar" value="true"></config><!-- 数据库配置是否在war包中-->
+	<config key="view_type" value="v2"></config><!--前台展示版本当前有v1,v2-->
+	<!--是否启用redis缓存，如果启用需要配置redis.properties -->
+	<config key="enabled_redis" value="false"></config>
+	<!--是否启用websocket，仅对tomcat6和7进行适配兼容-前端支持html5浏览器进行适配兼容 -->
+	<config key="enabled_websocket" value="false"></config>
+</root>

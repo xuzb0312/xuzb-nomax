@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config>
+		<!-- 文件上传设置 -->
+		<multipart_resolver defaultEncoding="GBK"
+			maxInMemorySize="52428800" maxUploadSize="104857600"></multipart_resolver>
+	</config>
+	<!--
+		<request path="/demo.api"
+		class="com.grace.frame.DemoApiController"></request> path:请求路径。
+		class:请求响应的controller
+	-->
+	<request path="/frame.api" class="com.grace.frame.service.FrameApiController"></request>
+</root>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 自定义用户树菜单格式 -->
+	<!--
+		例如：<config id="qxpz" name="权限配置"
+		action="demo.do?method=fwdDemo"></config>
+	-->
+</root>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--
+		格式为：<config key="demo"
+		value="com.grace.ldlsys.demo.DemoShutDownHandler"></config>
+		value：必须实现接口：ShutDownHandler
+	-->
+</root>

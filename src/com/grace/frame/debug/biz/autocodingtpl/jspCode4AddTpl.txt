@@ -1,0 +1,37 @@
+####################*新增JSP：win@{ywzj}Add.jsp*####################
+
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="easyFrame.tld" prefix="ef"%>
+<ef:body>
+	<ef:form name="form@{ywzj}" title="@{ywms}信息" rowcount="5">
+@{listcolm}
+	</ef:form>
+	<ef:buttons>
+		<ef:button value="保存" onclick="btnSaveClick();"></ef:button>
+		<ef:button value="清空" onclick="btnClearClick();"></ef:button>
+	</ef:buttons>
+</ef:body>
+<script type="text/javascript">
+	function onLoadComplete() {
+		getObject("form@{ywzj}").focus();
+	}
+	
+	function btnSaveClick() {
+		if (!getObject("form@{ywzj}").chkFormData(true)) {
+			return;
+		}
+		var url = new URL("**TODO：.do**", "save@{ywzj}Add");
+		url.addForm("form@{ywzj}");
+		AjaxUtil.syncBizRequest(url, function(data) {
+			alert("保存成功");
+			//**TODO：根据实际情况调整，没有返回内容，可以传递true**
+			closeWindow(data);
+		});
+	}
+
+	function btnClearClick() {
+		getObject("form@{ywzj}").clear();
+		getObject("form@{ywzj}").focus();
+	}
+</script>
+
